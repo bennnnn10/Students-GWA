@@ -14,4 +14,7 @@ with open("studentsGWA.txt", "r") as raw_files:
         student, gwa = line.strip().split(",")
         gwa = float(gwa)    
         #Check if the current GWA is lower than the current lowest GWA
+        if gwa < lowest_GWA:
+            lowest_GWA = gwa
+            highest_student = student
     #Print the Outcome
