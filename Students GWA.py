@@ -9,10 +9,10 @@ lowest_GWA = 5.0
 highest_student = []
 
 #Open the txt file in read mode
-with open("studentsGWA.txt", "r") as raw_files:
+with open("studentsGWA.txt", "r") as raw_file:
 
     #Loop through each line in the file
-    for line in raw_files:
+    for line in raw_file:
 
         #Split the line into student name and GWA, then convert the GWA to float
         student, gwa = line.strip().split(",")
@@ -20,9 +20,10 @@ with open("studentsGWA.txt", "r") as raw_files:
         
         #Check if the current GWA is lower than the current lowest GWA
         if gwa < lowest_GWA:
+            #If so, update the variables
             lowest_GWA = gwa
             highest_student = student
-            
+
     #Print the Outcome
     if lowest_GWA:
         print(f"The student with the highest GWA is {highest_student} with a GWA of {lowest_GWA}")
