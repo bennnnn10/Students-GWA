@@ -18,3 +18,7 @@ with open("studentsGWA.txt", "r") as raw_files:
             lowest_GWA = gwa
             highest_student = student
     #Print the Outcome
+    if lowest_GWA:
+        print(f"The student with the highest GWA is {highest_student} with a GWA of {lowest_GWA}")
+    else:
+        print("There were no student records in the provided file.")
