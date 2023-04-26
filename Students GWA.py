@@ -2,6 +2,8 @@
 #BSCPE 1-4
 #Object-Oriented Programming
 
+#Set the initial lowest GWA value to 5.0
+lowest_GWA = 5.0
 #Open the txt file in read mode
 with open("studentsGWA.txt", "r") as raw_files:
     #Loop through each line in the file
